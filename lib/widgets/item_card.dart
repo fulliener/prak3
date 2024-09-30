@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../models/sneaker.dart';
+import '../models/item.dart';
 
-class SneakerCard extends StatelessWidget {
-  final Sneaker sneaker;
+class ItemCard extends StatelessWidget {
+  final Item item;
   final VoidCallback onTap;
 
-  const SneakerCard({
+  const ItemCard({
     Key? key,
-    required this.sneaker,
+    required this.item,
     required this.onTap,
   }) : super(key: key);
 
@@ -26,7 +26,7 @@ class SneakerCard extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
-                  sneaker.imagePath,
+                  item.imagePath,
                   height: 150,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -34,7 +34,7 @@ class SneakerCard extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                sneaker.name,
+                item.name,
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class SneakerCard extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                '${sneaker.brand} | \$${sneaker.price.toStringAsFixed(2)}',
+                '${item.brand} | \$${item.price.toStringAsFixed(2)}',
                 style: const TextStyle(
                   fontSize: 14,
                   color: Colors.grey,

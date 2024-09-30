@@ -1,4 +1,4 @@
-class Sneaker {
+class Item {
   final String id;
   final String name;
   final String brand;
@@ -6,7 +6,7 @@ class Sneaker {
   final double price;
   final String description;
 
-  Sneaker({
+  Item({
     required this.id,
     required this.name,
     required this.brand,

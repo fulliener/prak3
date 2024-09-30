@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import '../models/sneaker.dart';
+import '../models/item.dart';
 
-class SneakerDetailScreen extends StatelessWidget {
-  final Sneaker sneaker;
+class ItemDetailScreen extends StatelessWidget {
+  final Item item;
 
-  const SneakerDetailScreen({Key? key, required this.sneaker}) : super(key: key);
+  const ItemDetailScreen({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(sneaker.name),
+        title: Text(item.name),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -18,14 +18,14 @@ class SneakerDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              sneaker.imagePath,
+              item.imagePath,
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
             const SizedBox(height: 16),
             Text(
-              sneaker.name,
+              item.name,
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -33,7 +33,7 @@ class SneakerDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              '${sneaker.brand} | \$${sneaker.price.toStringAsFixed(2)}',
+              '${item.brand} | \$${item.price.toStringAsFixed(2)}',
               style: const TextStyle(
                 fontSize: 18,
                 color: Colors.grey,
@@ -41,7 +41,7 @@ class SneakerDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              sneaker.description,
+              item.description,
               style: const TextStyle(
                 fontSize: 16,
               ),
