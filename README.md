@@ -4,5 +4,7 @@
 
 #ПР3
 
-https://github.com/user-attachments/assets/cf6e7c7c-e111-4582-a8dc-f376fe89a32c
+
+https://github.com/user-attachments/assets/301d10a5-1819-4437-8a52-38d47f11412b
+
 
